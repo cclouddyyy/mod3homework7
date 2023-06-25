@@ -6,28 +6,28 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Phone> phones = new ArrayList<>();
-        phones.add(new Phone("Samsung", "Galaxy S21", 799.99));
-        phones.add(new Phone("Samsung", "Galaxy Note20", 1199.99));
-        phones.add(new Phone("Apple", "iPhone 12 Pro", 999.00));
-        phones.add(new Phone("Apple", "iPhone SE", 399.00));
-        phones.add(new Phone("Google", "Pixel 5", 699.00));
-        phones.add(new Phone("Google", "Pixel 4a", 349.00));
+        phones.add(new Phone("Xiaomi", "Redmi 6", 9999.99));
+        phones.add(new Phone("Xiaomi", "A3", 19999.99));
+        phones.add(new Phone("Apple", "iPhone 12 Pro", 500000.00));
+        phones.add(new Phone("Apple", "iPhone 4", 30000.00));
+        phones.add(new Phone("Honor", "20 pro", 35000.00));
+        phones.add(new Phone("Honor", "9X", 45000.00));
 
         List<String> samsungModels = phones.stream()
-                .filter(phone -> phone.getManufacturer().equals("Samsung"))
+                .filter(phone -> phone.getManufacturer().equals("Honor"))
                 .map(Phone::getModel)
                 .collect(Collectors.toList());
 
-        System.out.println("Модели телефонов Samsung:");
+        System.out.println("Модели телефонов Honor:");
         System.out.println(samsungModels);
 
         Phone[] phoneArray = {
-                new Phone("Samsung", "Galaxy S21", 799.99),
-                new Phone("Samsung", "Galaxy Note20", 1199.99),
-                new Phone("Apple", "iPhone 12 Pro", 999.00),
-                new Phone("Apple", "iPhone SE", 399.00),
-                new Phone("Google", "Pixel 5", 699.00),
-                new Phone("Google", "Pixel 4a", 349.00)
+                new Phone("Xiaomi", "Redmi 6", 9999.99),
+                new Phone("Xiaomi", "A3", 19999.99),
+                new Phone("Apple", "iPhone 12 Pro", 500000.00),
+                new Phone("Apple", "iPhone 4", 30000.00),
+                new Phone("Honor", "20 pro", 35000.00),
+                new Phone("Honor", "9X", 45000.00),
         };
 
         System.out.println("Массив телефонов:");
